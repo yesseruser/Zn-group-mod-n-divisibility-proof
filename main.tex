@@ -1,0 +1,75 @@
+\documentclass[fleqn,a5paper,10pt]{article}
+\usepackage[a5paper, margin=1.5cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{multicol}
+
+\setlength{\columnseprule}{0.4pt}
+
+\title{Důkaz řádové dělitelnosti $n$ grupy $(Z_n; +_n) \pmod{n}$}
+\author{yesseruser}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	Důkaz, že $\sum^{n}_{i=1}a \equiv 0 \pmod n$ platí \\
+	pro každé $a$ v grupě $\mathbb{Z} \bmod{n}$.
+\end{abstract}
+
+\section{Základní pojmy}
+
+\newtheorem{definition}{Definice}
+\begin{definition}
+	\[
+		a +_n b = a + b \bmod n
+	\]
+\end{definition}
+\begin{definition}
+	\[
+		Z_n = \{0; 1; \dots; n - 1\}
+	\]
+\end{definition}
+\begin{definition}
+	\[
+		(Z_n; +_n)\text{ je grupa } \mathbb{Z} \pmod n
+	\]
+\end{definition}
+
+\newtheorem*{theorem}{Věta}
+% \begin{theorem}
+% 	\[
+% 		\forall a \in Z_n: \underbrace{a +_n a +_n \dots +_n a}_{n\text{ krát}} = 0
+% 	\]
+% \end{theorem}
+\begin{theorem}
+	\[
+		\forall a \in Z_n: \sum^{n}_{i=1}a \equiv 0 \pmod n
+	\]
+\end{theorem}
+
+\begin{proof}
+	\begin{align*}
+		 & (\forall a, k \in \mathbb{Z}: \frac{k \cdot a}{k}= a) \\
+		 & \implies  k \cdot a \bmod k = 0                       \\
+		 & \implies  n \cdot a \bmod n = 0                       \\
+		 & \implies  \sum^{n}_{i=1}a \equiv 0 \pmod n
+	\end{align*}
+\end{proof}
+
+\section{Závěr}
+Bylo dokázáno, že v grupě $(Z_n; +_n) \pmod{n}$ platí $\sum^{n}_{i=1}a \equiv 0 \pmod n$.
+
+\end{document}
